@@ -1,7 +1,5 @@
 # Интерфейсная плата разъемов для Pentagon 128 2023/2024
 
-![Assembly](images/assembly.png)
-
 ![photo_1](images/photo_1.jpg)
 ![photo_2](images/photo_2.jpg)
 ![pcb_front_perspective](images/pcb_front_perspective.png)
