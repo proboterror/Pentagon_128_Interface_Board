@@ -1,4 +1,4 @@
-# Интерфейсная плата разъемов для Pentagon 128 2023/2024
+﻿# Интерфейсная плата разъемов для Pentagon 128 2023/2024
 
 ![photo_1](images/photo_1.jpg)
 ![photo_2](images/photo_2.jpg)
@@ -10,7 +10,7 @@
 ![scheme-vga](images/scheme-vga-RP2040-Zero.png)
 
 Плата основывается на открытых проектах и информации:
-* [PS/2 Universal Keyboard Controller (C) Xrust 2021](https://zx-pk.ru/threads/33211-universalnyj-kontroller-ps-2-klaviatury-dlya-kompyuterov-s-matrichnymi-klaviaturami.html)
+* [PS/2 Universal Keyboard Controller](https://zx-pk.ru/threads/33211-universalnyj-kontroller-ps-2-klaviatury-dlya-kompyuterov-s-matrichnymi-klaviaturami.html) (C) Xrust 2021
 * Схема согласования SCART TV-Out: Sprite @tg / Froggy @zx-pk.ru
 * [ZX_RGBI2VGA-HDMI](https://github.com/AlexEkb4ever/ZX_RGBI2VGA-HDMI) (C) @Alex_Eburg 
 
@@ -130,8 +130,8 @@ J7 Floppy Power 4 Pin 2.54 mm Right Angle Connector<br>
 Подбирайте High / Flat вариант под вашу ревизию платы. Длина варианта High: 12 мм, Flat: 10 мм.
 
 J9, J10, J11<br>
-10PCS PJ-215 PJ-325 3.5MM Headphone jack 5Pin Female Socket Connector for Audio Video RED BLACK BLUE YELLOW GREEN
-[aliexpress](https://aliexpress.com/item/32830267803.html)<br>
+10PCS PJ-215 PJ-325 3.5MM Headphone jack 5Pin Female Socket Connector for Audio Video RED BLACK BLUE YELLOW GREEN<br>
+[aliexpress](https://aliexpress.com/item/32830267803.html)
 
 J12 Mini DIN 6 Female<br>
 [aliexpress](https://aliexpress.ru/item/4000106967115.html?sku_id=10000000276404455)
