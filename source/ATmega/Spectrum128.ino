@@ -548,7 +548,7 @@ void loop()
 						if(entry->zx_code_2 != ZX_KEY_NONE)
 						{
 							SetAddr(entry->zx_code_2); // Extended 58-key keyboard key
-							SetKey(state);.
+							SetKey(state);
 						}
 
 						state = HIGH;
