@@ -516,10 +516,10 @@ void SetKey(boolean data){
 	digitalWrite(CSMT, LOW);
 }
 
+volatile boolean state = HIGH;
+  
 void loop()
 {
-	boolean state = HIGH;
-
 	if( keyboard.available() )
 	{
 		int c = keyboard.read(); //чтение кода
