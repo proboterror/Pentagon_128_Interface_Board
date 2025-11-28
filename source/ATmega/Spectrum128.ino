@@ -138,139 +138,7 @@ enum zx_keys
 	ZX_KEY_H   = D4 | A_14,
 	ZX_KEY_B   = D4 | A_15,
 
-	NONE= 0x7F
-};
-
-uint8_t ps2_to_zx[128] = // PS/2 set 2 scancode to MTX8816 / ZX key matrix address mapping
-{
-	NONE,		// 0x0
-	NONE,		// 0x1
-	NONE,		// 0x2
-	NONE,		// 0x3
-	NONE,		// 0x4
-	NONE,		// 0x5
-	NONE,		// 0x6
-	NONE,		// 0x7
-	NONE,		// 0x8
-	NONE,		// 0x9
-	NONE,		// 0xA
-	NONE,		// 0xB
-	NONE,		// 0xC
-	NONE,		// 0xD
-	NONE,		// 0xE
-	NONE,		// 0xF
-	NONE,		// 0x10
-	NONE,		// 0x11
-	ZX_KEY_CS,	// 0x12 PS2_KEY_LSHIFT
-	NONE,		// 0x13
-	NONE,		// 0x14
-	ZX_KEY_Q,	// 0x15 PS2_KEY_Q
-	ZX_KEY_1,	// 0x16 PS2_KEY_1
-	NONE,		// 0x17
-	NONE,		// 0x18
-	NONE,		// 0x19
-	ZX_KEY_Z,	// 0x1A PS2_KEY_Z
-	ZX_KEY_S,	// 0x1B PS2_KEY_S
-	ZX_KEY_A,	// 0x1C PS2_KEY_A
-	ZX_KEY_W,	// 0x1D PS2_KEY_W
-	ZX_KEY_2,	// 0x1E PS2_KEY_2
-	NONE,		// 0x1F
-	NONE,		// 0x20
-	ZX_KEY_C,	// 0x21 PS2_KEY_C
-	ZX_KEY_X,	// 0x22 PS2_KEY_X
-	ZX_KEY_D,	// 0x23 PS2_KEY_D
-	ZX_KEY_E,	// 0x24 PS2_KEY_E
-	ZX_KEY_4,	// 0x25 PS2_KEY_4
-	ZX_KEY_3,	// 0x26 PS2_KEY_3
-	NONE,		// 0x27
-	NONE,		// 0x28
-	ZX_KEY_SP,	// 0x29 PS2_KEY_SPACE
-	ZX_KEY_V,	// 0x2A PS2_KEY_V
-	ZX_KEY_F,	// 0x2B PS2_KEY_F
-	ZX_KEY_T,	// 0x2C PS2_KEY_T
-	ZX_KEY_R,	// 0x2D PS2_KEY_R
-	ZX_KEY_5,	// 0x2E PS2_KEY_5
-	NONE,		// 0x2F
-	NONE,		// 0x30
-	ZX_KEY_N,	// 0x31 PS2_KEY_N
-	ZX_KEY_B,	// 0x32 PS2_KEY_B
-	ZX_KEY_H,	// 0x33 PS2_KEY_H
-	ZX_KEY_G,	// 0x34 PS2_KEY_G
-	ZX_KEY_Y,	// 0x35 PS2_KEY_Y
-	ZX_KEY_6,	// 0x36 PS2_KEY_6
-	NONE,		// 0x37
-	NONE,		// 0x38
-	NONE,		// 0x39
-	ZX_KEY_M,	// 0x3A PS2_KEY_M
-	ZX_KEY_J,	// 0x3B PS2_KEY_J
-	ZX_KEY_U,	// 0x3C PS2_KEY_U
-	ZX_KEY_7,	// 0x3D PS2_KEY_7
-	ZX_KEY_8,	// 0x3E PS2_KEY_8
-	NONE,		// 0x3F
-	NONE,		// 0x40
-	NONE,		// 0x41
-	ZX_KEY_K,	// 0x42 PS2_KEY_K
-	ZX_KEY_I,	// 0x43 PS2_KEY_I
-	ZX_KEY_O,	// 0x44 PS2_KEY_O
-	ZX_KEY_0,	// 0x45 PS2_KEY_0
-	ZX_KEY_9,	// 0x46 PS2_KEY_9
-	NONE,		// 0x47
-	NONE,		// 0x48
-	NONE,		// 0x49
-	NONE,		// 0x4A
-	ZX_KEY_L,	// 0x4B PS2_KEY_L
-	NONE,		// 0x4C
-	ZX_KEY_P,	// 0x4D PS2_KEY_P
-	NONE,		// 0x4E
-	NONE,		// 0x4F
-	NONE,		// 0x50
-	NONE,		// 0x51
-	NONE,		// 0x52
-	NONE,		// 0x53
-	NONE,		// 0x54
-	NONE,		// 0x55
-	NONE,		// 0x56
-	NONE,		// 0x57
-	NONE,		// 0x58
-	ZX_KEY_SS,	// 0x59 PS2_KEY_RSHIFT
-	ZX_KEY_ENT,	// 0x5A PS2_KEY_RETURN / Enter on main keyboard
-	NONE,		// 0x5B
-	NONE,		// 0x5C
-	NONE,		// 0x5D
-	NONE,		// 0x5E
-	NONE,		// 0x5F
-	NONE,		// 0x60
-	NONE,		// 0x61
-	NONE,		// 0x62
-	NONE,		// 0x63
-	NONE,		// 0x64
-	NONE,		// 0x65
-	ZX_KEY_0,	// 0x66 PS2_KEY_BACK / Backspace
-	NONE,		// 0x67
-	NONE,		// 0x68
-	NONE,		// 0x69
-	NONE,		// 0x6A
-	ZX_KEY_5,	// 0x6B PS2_KEY_NUMPAD4
-	NONE,		// 0x6C
-	NONE,		// 0x6D
-	NONE,		// 0x6E
-	NONE,		// 0x6F
-	NONE,		// 0x70
-	NONE,		// 0x71
-	NONE,		// 0x72
-	NONE,		// 0x73
-	NONE,		// 0x74
-	NONE,		// 0x75
-	NONE,		// 0x76
-	NONE,		// 0x77
-	NONE,		// 0x78
-	NONE,		// 0x79
-	NONE,		// 0x7A
-	NONE,		// 0x7B
-	NONE,		// 0x7C
-	NONE,		// 0x7D
-	NONE,		// 0x7E
-	NONE,		// 0x7F
+	ZX_KEY_NONE= 0x7F
 };
 
 /*
@@ -501,6 +369,99 @@ enum ps2_scan_codes_set_2
   PS2_KEY_DELETE   0xE0, 0x71  "Delete on arrow keypad"     PS2_KEY_DECIMAL  0x71 ". on numeric keypad"
 */
 
+/*
+ Taken from https://github.com/leonid-z/zxkeyboard/blob/master/zxps2adapter/zxps2adapter/main.asm
+
+ 1 byte scan code for press, prefix F0 for release
+ <PS/2 Set 2 Scan Code>, <1st zx key code> <2nd zx key code>
+*/
+struct scan_code_table_t
+{
+	uint8_t ps_2_code;
+	uint8_t zx_code_1;
+	uint8_t zx_code_2;
+}
+const static scan_code_table[] =
+{
+	{ PS2_KEY_TAB,        ZX_KEY_CS,   ZX_KEY_SS   }, // Tab -- EXTENDED MODE
+	{ PS2_KEY_LSHIFT,     ZX_KEY_CS,   ZX_KEY_NONE }, // Left Shift -- CAPS SHIFT
+//	{ PS2_KEY_LCONTROL,   ZX_KEY_SS,   ZX_KEY_NONE }, // Left Ctrl
+	{ PS2_KEY_Q,          ZX_KEY_Q,    ZX_KEY_NONE }, // Q
+	{ PS2_KEY_1,          ZX_KEY_1,    ZX_KEY_NONE }, // 1
+	{ PS2_KEY_Z,          ZX_KEY_Z,    ZX_KEY_NONE }, // Z
+	{ PS2_KEY_S,          ZX_KEY_S,    ZX_KEY_NONE }, // S
+	{ PS2_KEY_A,          ZX_KEY_A,    ZX_KEY_NONE }, // A
+	{ PS2_KEY_W,          ZX_KEY_W,    ZX_KEY_NONE }, // W
+	{ PS2_KEY_2,          ZX_KEY_2,    ZX_KEY_NONE }, // 2
+	{ PS2_KEY_C,          ZX_KEY_C,    ZX_KEY_NONE }, // C
+	{ PS2_KEY_X,          ZX_KEY_X,    ZX_KEY_NONE }, // X
+	{ PS2_KEY_D,          ZX_KEY_D,    ZX_KEY_NONE }, // D
+	{ PS2_KEY_E,          ZX_KEY_E,    ZX_KEY_NONE }, // E
+	{ PS2_KEY_4,          ZX_KEY_4,    ZX_KEY_NONE }, // 4
+	{ PS2_KEY_3,          ZX_KEY_3,    ZX_KEY_NONE }, // 3
+	{ PS2_KEY_SPACE,      ZX_KEY_SP,   ZX_KEY_NONE }, // Space
+	{ PS2_KEY_V,          ZX_KEY_V,    ZX_KEY_NONE }, // V
+	{ PS2_KEY_F,          ZX_KEY_F,    ZX_KEY_NONE }, // F
+	{ PS2_KEY_T,          ZX_KEY_T,    ZX_KEY_NONE }, // T
+	{ PS2_KEY_R,          ZX_KEY_R,    ZX_KEY_NONE }, // R
+	{ PS2_KEY_5,          ZX_KEY_5,    ZX_KEY_NONE }, // 5
+	{ PS2_KEY_N,          ZX_KEY_N,    ZX_KEY_NONE }, // N
+	{ PS2_KEY_B,          ZX_KEY_B,    ZX_KEY_NONE }, // B
+	{ PS2_KEY_H,          ZX_KEY_H,    ZX_KEY_NONE }, // H
+	{ PS2_KEY_G,          ZX_KEY_G,    ZX_KEY_NONE }, // G
+	{ PS2_KEY_Y,          ZX_KEY_Y,    ZX_KEY_NONE }, // Y
+	{ PS2_KEY_6,          ZX_KEY_6,    ZX_KEY_NONE }, // 6
+	{ PS2_KEY_M,          ZX_KEY_M,    ZX_KEY_NONE }, // M
+	{ PS2_KEY_J,          ZX_KEY_J,    ZX_KEY_NONE }, // J
+	{ PS2_KEY_U,          ZX_KEY_U,    ZX_KEY_NONE }, // U
+	{ PS2_KEY_7,          ZX_KEY_7,    ZX_KEY_NONE }, // 7
+	{ PS2_KEY_8,          ZX_KEY_8,    ZX_KEY_NONE }, // 8
+	{ PS2_KEY_COMMA,      ZX_KEY_SS,   ZX_KEY_N    }, // ,
+	{ PS2_KEY_K,          ZX_KEY_K,    ZX_KEY_NONE }, // K
+	{ PS2_KEY_I,          ZX_KEY_I,    ZX_KEY_NONE }, // I
+	{ PS2_KEY_O,          ZX_KEY_O,    ZX_KEY_NONE }, // O
+	{ PS2_KEY_0,          ZX_KEY_0,    ZX_KEY_NONE }, // 0
+	{ PS2_KEY_9,          ZX_KEY_9,    ZX_KEY_NONE }, // 9
+	{ PS2_KEY_PERIOD,     ZX_KEY_SS,   ZX_KEY_M    }, // .
+	{ PS2_KEY_SLASH,      ZX_KEY_SS,   ZX_KEY_V    }, // /
+	{ PS2_KEY_L,          ZX_KEY_L,    ZX_KEY_NONE }, // L
+	{ PS2_KEY_SEMICOLON,  ZX_KEY_SS,   ZX_KEY_O    }, // ;
+	{ PS2_KEY_P,          ZX_KEY_P,    ZX_KEY_NONE }, // P
+	{ PS2_KEY_MINUS,      ZX_KEY_SS,   ZX_KEY_J    }, // -
+	{ PS2_KEY_APOSTROPHE, ZX_KEY_SS,   ZX_KEY_P    }, // "
+	{ PS2_KEY_EQUALS,     ZX_KEY_SS,   ZX_KEY_L    }, // =
+	{ PS2_KEY_CAPITAL,    ZX_KEY_CS,   ZX_KEY_2    }, // Caps Lock
+	{ PS2_KEY_RSHIFT,     ZX_KEY_SS,   ZX_KEY_NONE }, // Right Shift -- SYMBOL SHIFT
+	{ PS2_KEY_RETURN,     ZX_KEY_ENT,  ZX_KEY_NONE }, // Enter
+	{ PS2_KEY_BACK,       ZX_KEY_CS,   ZX_KEY_0    }, // BackSpace - DELETE
+	{ PS2_KEY_NUMPAD8,    ZX_KEY_CS,   ZX_KEY_7    }, // Up
+	{ PS2_KEY_NUMPAD4,    ZX_KEY_CS,   ZX_KEY_5    }, // Left
+	{ PS2_KEY_NUMPAD2,    ZX_KEY_CS,   ZX_KEY_6    }, // Down
+	{ PS2_KEY_NUMPAD6,    ZX_KEY_CS,   ZX_KEY_8    }, // Right
+	{ PS2_KEY_DECIMAL,    ZX_KEY_SS,   ZX_KEY_M    }, // .
+	{ PS2_KEY_ESCAPE,     ZX_KEY_CS,   ZX_KEY_1    }, // Esc - EDIT
+	{ PS2_KEY_ADD,        ZX_KEY_SS,   ZX_KEY_K    }, // +
+	{ PS2_KEY_SUBTRACT,   ZX_KEY_SS,   ZX_KEY_J    }, // -
+	{ PS2_KEY_MULTIPLY,   ZX_KEY_SS,   ZX_KEY_B    }, // *
+	{ 0x00, 0x00, 0x00 }
+},
+// Mapping table for PS/2 set 2 extended scan codes starting with 0xE0.
+// Single-byte make code used instead of two byte codes
+// in attempt to make things faster and simpler.  
+scan_code_table_E0[] =
+{
+//	{ PS2_KEY_LCONTROL /*PS2_KEY_RCONTROL*/,  ZX_KEY_SS,   ZX_KEY_NONE }, // Left Ctrl
+	{ PS2_KEY_NUMPAD8 /*PS2_KEY_UP*/,         ZX_KEY_CS,   ZX_KEY_7}, // Up
+	{ PS2_KEY_NUMPAD4 /*PS2_KEY_LEFT*/,       ZX_KEY_CS,   ZX_KEY_5}, // Left
+	{ PS2_KEY_NUMPAD2 /*PS2_KEY_DOWN*/,       ZX_KEY_CS,   ZX_KEY_6}, // Down
+	{ PS2_KEY_NUMPAD6 /*PS2_KEY_RIGHT*/,      ZX_KEY_CS,   ZX_KEY_8}, // Right
+	{ PS2_KEY_SLASH /*PS2_KEY_DIVIDE*/,       ZX_KEY_SS,   ZX_KEY_V}, // /
+	{ PS2_KEY_RETURN /*PS2_KEY_NUMPADENTER*/, ZX_KEY_ENT,  ZX_KEY_NONE}, // Enter
+	{ PS2_KEY_NUMPAD9 /*PS2_KEY_PRIOR*/,      ZX_KEY_CS,   ZX_KEY_3 }, // PageUp
+	{ PS2_KEY_NUMPAD3 /*PS2_KEY_NEXT*/,       ZX_KEY_CS,   ZX_KEY_4 }, // PageDown
+	{ 0x00, 0x00, 0x00 }
+};
+
 PS2KeyRaw keyboard;
 
 void setup()
@@ -564,99 +525,38 @@ void loop()
 		int c = keyboard.read(); //чтение кода
 		switch (c)
 		{
-			case 0xE0:				//если считался префикс 0xE0 (2-byte extended key code prefix)
+			case 0xE0: //если считался префикс 0xE0 (2-byte extended key code prefix)
 				break;
-			case 0xF0:				//если считался префикс 0xF0 (отпускание клавиши)
+			case 0xF0: //если считался префикс 0xF0 (отпускание клавиши)
 				state = LOW;
 				break;
-			case PS2_KEY_BACK:		//если считался код 0x66 [BS]
-				SetAddr(ZX_KEY_CS);
-				SetKey(state);
-				SetAddr(ZX_KEY_0);
-				SetKey(state);
-				state = HIGH;
-				break;
-			case 0x6B:				//если считался код 0x6B [Left] PS2_KEY_NUMPAD4 0x6B / PS2_KEY_LEFT 0xE0 0x6B
-				SetAddr(ZX_KEY_CS);
-				SetKey(state);
-				SetAddr(ZX_KEY_5);
-				SetKey(state);
-				state = HIGH;
-				break;
-			case 0x72:				//если считался код 0x72 [Down] PS2_KEY_NUMPAD2 0x72 / PS2_KEY_DOWN 0xE0 0x72
-				SetAddr(ZX_KEY_CS);
-				SetKey(state);
-				SetAddr(ZX_KEY_6);
-				SetKey(state);
-				state = HIGH;
-				break;
-			case 0x75:				//если считался код 0x75 [Up] PS2_KEY_NUMPAD8 0x75 / PS2_KEY_UP 0xE0 0x75
-				SetAddr(ZX_KEY_CS);
-				SetKey(state);
-				SetAddr(ZX_KEY_7);
-				SetKey(state);
-				state = HIGH;
-				break;
-			case 0x74:				//если считался код 0x74 [Right] PS2_KEY_NUMPAD6 0x74 / PS2_KEY_RIGHT 0xE0 0x74
-				SetAddr(ZX_KEY_CS);
-				SetKey(state);
-				SetAddr(ZX_KEY_8);
-				SetKey(state);
-				state = HIGH;
-				break;
-			case PS2_KEY_ESCAPE:	//если считался код 0x76 [Edit]
-				SetAddr(ZX_KEY_CS);
-				SetKey(state);
-				SetAddr(ZX_KEY_1);
-				SetKey(state);
-				state = HIGH;
-				break;
-			case PS2_KEY_CAPITAL:	//если считался код 0x58 [Caps lock]
-				SetAddr(ZX_KEY_CS);
-				SetKey(state);
-				SetAddr(ZX_KEY_2);
-				SetKey(state);
-				state = HIGH;
-				break;
-			case PS2_KEY_TAB:		//если считался код 0x0D [Ext mode]
-				SetAddr(ZX_KEY_CS);
-				SetKey(state);
-				SetAddr(ZX_KEY_SS);
-				SetKey(state);
-				state = HIGH;
-				break;
-			case PS2_KEY_COMMA:		//если считался код 0x41 [,]
-				SetAddr(ZX_KEY_SS);
-				SetKey(state);
-				SetAddr(ZX_KEY_N);
-				SetKey(state);
-				state = HIGH;
-				break;
-			case PS2_KEY_PERIOD:	//если считался код 0x49 [.]
-				SetAddr(ZX_KEY_SS);
-				SetKey(state);
-				SetAddr(ZX_KEY_M);
-				SetKey(state);
-				state = HIGH;
-				break;
-			case PS2_KEY_SEMICOLON: //если считался код 0x4C [;]
-				SetAddr(ZX_KEY_SS);
-				SetKey(state);
-				SetAddr(ZX_KEY_O);
-				SetKey(state);
-				state = HIGH;
-				break;
-			case PS2_KEY_APOSTROPHE: //если считался код 0x52 ["]
-				SetAddr(ZX_KEY_SS);
-				SetKey(state);
-				SetAddr(ZX_KEY_P);
-				SetKey(state);
-				state = HIGH;
-				break;
 			default:
-				SetAddr(ps2_to_zx[c]);
-				SetKey(state);
-				state = HIGH;
+				const struct scan_code_table_t *entry = scan_code_table; // (code_0 == 0xE0) ? scan_code_table_E0 : scan_code_table;
+
+				// Linear find with O(n). Can be pre-sorted offline and processes with O(log2n),
+				// or sparsed array can be created with at least 0x7F(0x83) entries for O(1).
+				while (entry->ps_2_code)
+				{
+					if(entry->ps_2_code == c)
+					{
+						if(entry->zx_code_1 != ZX_KEY_NONE)
+						{
+							SetAddr(entry->zx_code_1);
+							SetKey(state);
+						}
+
+						if(entry->zx_code_2 != ZX_KEY_NONE)
+						{
+							SetAddr(entry->zx_code_2); // Extended 58-key keyboard key
+							SetKey(state);.
+						}
+
+						state = HIGH;
+
+						break;
+					}
+					entry++;
+				}
 		}
 	}
 }
